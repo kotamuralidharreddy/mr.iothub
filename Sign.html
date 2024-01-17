@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>iot</title>
+<link rel="stylesheet" href="styles.css">
+    <style>
+   {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Set a background color for the body and style font-family */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Style the header */
+    header {
+      background-color:rgb(255, 166, 0);
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    /* Style the navigation menu */
+    nav {
+      background-color: rgb(255, 166, 0);
+      text-align: center;
+color: #fff;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 1rem 0;
+    }
+
+    nav li {
+      display: inline;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    nav a:hover {
+      background-color: #555;
+
+    }
+
+    /* Style the main content section */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        #password-strength {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <header>
+    <h1> internet of things</h1>
+    <h4><b></b></h4>
+  </header>
+  <marquee style="color:black">Registrations are open upto 01-12-2023.     Fill the form in online according to your details</marquee>
+  <nav>
+    <ul>
+      <li>iot hub</li>
+    </ul>
+  </nav>
+<h1> Login Page</h1>
+
+
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" onkeyup="checkPasswordStrength()" required><br><br>
+            <span id="password-strength"></span><br><br>
+            
+            <button type="button" onclick="navigateToTargetPage()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function checkPasswordStrength() {
+            const password = document.getElementById('password').value;
+            const strengthIndicator = document.getElementById('password-strength');
+            const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+
+            if (strongRegex.test(password)) {
+                strengthIndicator.style.color = 'green';
+                strengthIndicator.textContent = 'Strong Password';
+            } else {
+                strengthIndicator.style.color = 'red';
+                strengthIndicator.textContent = 'Weak Password';
+            }
+        }
+
+        function navigateToTargetPage() {
+            // Replace 'your_target_page.html' with the actual target page URL
+            window.location.href = "C:\Users\Mural\OneDrive\Desktop\FSD1/Sign.html";
+        }
+    </script>
+
+</body>
+</html>
